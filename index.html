@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Showcase</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #d35400;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            margin: 50px 0;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            width: 200px;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            height: 150px;
+            margin: 30px 0;
+            overflow: hidden;
+            border: 4px solid #d35400;
+            border-radius: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .slider {
+            display: flex;
+            animation: scroll 10s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .slider img {
+            flex-shrink: 0;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .navigation-buttons {
+            display: none; /* Buttons removed for seamless autoplay */
+        }
+
+        .contact {
+            margin: 30px 0;
+            text-align: center;
+            font-size: 1.2em;
+            color: #d35400;
+        }
+
+        @media (max-width: 768px) {
+            .logo img {
+                max-width: 150px;
+            }
+
+            .slider-container {
+                height: 120px;
+            }
+
+            .slider img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .contact {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="assets/logo_transparent.png" alt="Company Logo">
+    </div>
+
+    <div class="slider-container">
+        <div class="slider" id="slider">
+            <img src="assets/prod1.jpg" alt="Product 1">
+            <img src="assets/prod2.jpg" alt="Product 2">
+            <img src="assets/prod3.jpg" alt="Product 3">
+            <img src="assets/prod4.jpg" alt="Product 4">
+            <img src="assets/prod5.jpg" alt="Product 5">
+            <img src="assets/prod6.jpg" alt="Product 6">
+            <img src="assets/prod7.jpg" alt="Product 7">
+            <img src="assets/prod1.jpg" alt="Product 1"> <!-- Repeated for seamless looping -->
+            <img src="assets/prod2.jpg" alt="Product 2">
+            <img src="assets/prod3.jpg" alt="Product 3">
+            <img src="assets/prod4.jpg" alt="Product 4">
+            <img src="assets/prod5.jpg" alt="Product 5">
+            <img src="assets/prod6.jpg" alt="Product 6">
+            <img src="assets/prod7.jpg" alt="Product 7">
+        </div>
+    </div>
+
+    <div class="contact">
+        To get in touch with us, please contact us at <a href="mailto:response@ikone.in">response@ikone.in</a>
+    </div>
+</body>
+</html>
